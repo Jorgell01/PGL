@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ejercicio2</string>
+    <string name="mensaje_error_acceso">"Error al iniciar sesión. No es un user del sistema"</string>
+    <string name="mensaje_error_menor">"Eres menor de edad"</string>
+    <string name="mensaje_error_viejo">"Eres demasiado viejo mano"</string>
+    <string name="mensaje_okey_autorizado">"Acceso autorizado, sus Hobbies son: "</string>
+    <string name="mensaje_else">"Edad fuera del rango, eres Tutankamón"</string>
+</resources>
