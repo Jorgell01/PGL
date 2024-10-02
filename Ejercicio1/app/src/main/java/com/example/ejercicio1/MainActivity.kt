@@ -1,6 +1,7 @@
 package com.example.ejercicio1
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         }
         val programador = Programador()
         val datos = programador.getProgrammerData()
+
+        Log.d(":!:!:!", "Nombre: ${datos.name}, Edad: ${datos.age}, Lenguaje: ${datos.language}")
     }
 
     class Programador: ProgramadorInterface {
@@ -40,6 +43,10 @@ class MainActivity : AppCompatActivity() {
             return ProgrammerData(getName(), getAge(), getLanguage())
         }
     }
+}
+
+interface ProgramadorInterface {
+    fun getProgrammerData(): ProgrammerData
 }
 
 data class ProgrammerData(

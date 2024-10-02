@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     object datosUsuario {
         const val NAME:String = "Jorge"
-        const val AGE:Int = 23
+        const val AGE:Int = 200
         val HOBBIES:List<String> = listOf("Lol", "Cagar", "Domir")
     }
 
