@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- TextView para mostrar el mensaje de bienvenida -->
+    <TextView
+        android:id="@+id/tvMensajeBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido al VIERNES\n POR LA NOCHE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rgSemana"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- RadioGroup para seleccionar los días de la semana -->
+    <RadioGroup
+        android:id="@+id/rgSemana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMensajeBienvenida"
+        app:layout_constraintBottom_toTopOf="@id/spinner">
+
+        <RadioButton
+            android:id="@+id/radioMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LUNES"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:id="@+id/radioTuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MARTES"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:id="@+id/radioWednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MIÉRCOLES"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:id="@+id/radioThursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JUEVES"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:id="@+id/radioFriday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIERNES"
+            android:checked="true"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:id="@+id/radioSaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SÁBADO"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:id="@+id/radioSunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOMINGO"
+            android:textColor="@android:color/holo_red_dark" />
+    </RadioGroup>
+
+    <!-- Spinner para seleccionar el tiempo del día (Mañana, Tarde, Noche) -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rgSemana"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
